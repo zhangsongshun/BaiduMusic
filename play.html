@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <script>
+        var audio
+        function() {
+            var audio = document.getElementById("myAudio");
+        }
+        function aPlay() {
+            alert(audio)
+	        audio.play();
+        }
+        function aPause() {
+            audio.pause();
+        }
+        function aStop() {
+            audio.currentTime = 0;
+            audio.pause();
+        }
+        function aSkip() {
+            audio.currentTime = 50;
+            audio.play();
+         }
+    </script>
+</head>
+<body>
+    <audio id="myAudio" src="music/466078_K歌之王.mp3"></audio>
+    <input type="button" onclick="aPlay();" value="播放音频">
+    <input type="button" onclick="aPause();" value="暂停音频">
+    <input type="button" onclick="aStop();" value="停止音频">
+    <input type="button" onclick="aSkip();" value="跳到第50秒">
+</body>
+</html>
