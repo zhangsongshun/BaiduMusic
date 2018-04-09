@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Music</title>
+    <style>
+        audio{
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="myAudio" controls="true" src="music/2047054_富士山下.mp3"></audio>
+    <input type="button" onclick="aPlay();" value="播放音频">
+    <input type="button" onclick="aPause();" value="暂停音频">
+    <input type="button" onclick="aStop();" value="停止音频">
+    <input type="button" onclick="aSkip();" value="跳到第50秒">
+
     <script>
         var audio
-        function() {
-            var audio = document.getElementById("myAudio");
+        window.onload=function(){
+            audio=document.getElementById("myAudio");
         }
         function aPlay() {
-            alert(audio)
 	        audio.play();
         }
         function aPause() {
@@ -24,12 +37,5 @@
             audio.play();
          }
     </script>
-</head>
-<body>
-    <audio id="myAudio" src="music/466078_K歌之王.mp3"></audio>
-    <input type="button" onclick="aPlay();" value="播放音频">
-    <input type="button" onclick="aPause();" value="暂停音频">
-    <input type="button" onclick="aStop();" value="停止音频">
-    <input type="button" onclick="aSkip();" value="跳到第50秒">
 </body>
 </html>
